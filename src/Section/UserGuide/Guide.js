@@ -10,9 +10,9 @@ function Guide() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center my-10 h-full">
+    <div className={className.mainContainer}>
       <div
-        className="text-2xl font-semibold uppercase mb-10 text-center md:text-4xl"
+        className={className.guideTitle}
         data-aos="fade-down"
         data-aos-duration="1500"
       >
@@ -49,3 +49,8 @@ function Guide() {
 }
 
 export default Guide;
+
+const className = {
+  mainContainer: "flex flex-col items-center my-10 h-full",
+  guideTitle: "text-2xl font-semibold uppercase mb-10 text-center md:text-4xl",
+};
