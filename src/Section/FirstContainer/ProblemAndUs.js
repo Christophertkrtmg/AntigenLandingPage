@@ -13,19 +13,19 @@ function ProblemAndUs() {
 
   return (
     <div
-      className="w-full flex relative"
-      style={{ height: `calc(100vh - 64px)` }}
+      className="w-full flex"
+      style={{ height: `calc(100vh - 64px)`, backgroundColor: `#557BCF` }}
     >
-      <div className="w-1/2 shadow h-auto flex flex-col justify-center items-center">
-        <div className="text-3xl md:text-4xl xl:text-5xl text-gray-600 max-w-sm">
+      <div className="w-1/2 h-auto flex flex-col justify-center items-center">
+        <div className="text-3xl md:text-4xl xl:text-5xl text-gray-50 max-w-sm">
           GG-Antigen, Download app now...
         </div>
-        <div className=" text-gray-600 max-w-sm mt-10 text-sm sm:text-base">
+        <div className=" text-gray-50 max-w-sm mt-10 text-sm sm:text-base">
           Let's fight covid-19 together. Everything you need, we're here - self
           covid test, digital vaccine identity, and more...
         </div>
         <div className="flex flex-col mt-10 sm:flex-row items-start">
-          <button className="cursor-pointer flex items-center px-5 py-2 rounded-full bg-gray-700 text-white transition-all duration-300 ease-in-out hover:bg-gray-900 hover:opacity-90">
+          <button className={className.appleButton}>
             <AppleIcon fontSize="large" />
             <div className={className.buttonSentence}>
               <div className="text-xs">Download on the</div>
@@ -42,15 +42,16 @@ function ProblemAndUs() {
         </div>
       </div>
 
-      <div className="w-1/2 shadow h-auto">
+      <div className="w-1/2  h-auto">
         <div>
-          <Lottie
+          <Lottie className=" cursor-not-allowed"
             options={defaultOptions}
             height={550}
             width={550}
           />
         </div>
       </div>
+
     </div>
   );
 }
@@ -66,8 +67,8 @@ const className = {
   bannerDescription: " text-white max-w-sm mt-10 text-sm sm:text-base",
   buttonContainer: "flex flex-col mt-10 sm:flex-row items-start",
   appleButton:
-    "cursor-pointer flex items-center p-1.5 bg-gray-500 text-black transition-all duration-300 ease-in-out hover:bg-black hover:text-gray-200 hover:opacity-90",
+    "cursor-pointer flex items-center px-5 py-2 rounded-full bg-gray-700 text-white transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:bg-gray-900 hover:opacity-90 animate-pulse",
   playstoreButton:
-    "cursor-pointer mt-3 sm:mt-0 sm:ml-3 flex items-center p-1.5 bg-gray-500 text-black transition-all duration-300 ease-in-out hover:bg-black hover:text-gray-200 hover:opacity-90",
+    "cursor-pointer rounded-full mt-3 sm:mt-0 sm:ml-3 flex items-center px-5 py-2 bg-gray-200 shadow text-black transition-all duration-300 ease-in-out transform hover:-translate-y-2",
   buttonSentence: "flex flex-col ml-1 items-start tracking-tighter",
 };
